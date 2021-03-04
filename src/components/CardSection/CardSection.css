@@ -1,0 +1,12 @@
+.homepage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.homepage_card {
+    margin-bottom: 25px;
+    flex: 1 0 30%;
+    padding-right: 5%;
+    min-width: 325px;
+}

@@ -5,6 +5,7 @@ import { db } from "../firebase";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
   const [loader, setLoader] = useState(false);
@@ -16,12 +17,13 @@ const Contact = () => {
     db.collection("contacts")
       .add({
         name: name,
+        phone: phone,
         email: email,
         message: message,
       })
       .then(() => {
         setLoader(false);
-        alert("Your message has been submitted👍");
+        alert("Thanks for submitting your contact details! we will get back to you soon👍");
       })
       .catch((error) => {
         alert(error.message);
@@ -29,6 +31,7 @@ const Contact = () => {
       });
 
     setName("");
+    setPhone("");
     setEmail("");
     setMessage("");
   };
@@ -43,7 +46,12 @@ const Contact = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-
+      <label>Phone Number</label>
+      <input
+        placeholder="Phone Number"
+        value={phone}
+        onChange={(e) => setName(e.target.value)}
+      />
       <label>Email</label>
       <input
         placeholder="Email"
