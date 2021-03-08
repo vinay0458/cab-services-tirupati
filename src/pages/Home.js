@@ -4,7 +4,7 @@ import FlatCard from '../components/FlatCard/FlatCard';
 import './Home.css';
 import CardSection from '../components/CardSection/CardSection';
 import Welcome from '../components/Welcome/Welcome';
-
+import ContactInfo from '../components/ContactInfo/ContactInfo';
 function Home () {
     return (
         <div className="cardSection">
@@ -14,6 +14,7 @@ function Home () {
           <div>
             <h2>Why Choose Us? </h2>
             <CardSection/>
+            <ContactInfo/>
           </div>
         </div>
     )

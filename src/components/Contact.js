@@ -50,7 +50,7 @@ const Contact = () => {
       <input
         placeholder="Phone Number"
         value={phone}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => setPhone(e.target.value)}
       />
       <label>Email</label>
       <input

@@ -1,10 +1,18 @@
 h1 {
     margin-bottom: 10px;
+    padding-left: 15px;
 }
 .Welcome p {
     font-family: "Inter", sans-serif;
+    color: white;
+    width: 80%;
+    padding: 20px;
 }
 
 .Welcome {
     margin-bottom: 25px;
+    background-image: url("../../assets/banner.jpg");
+    color: white;
+    height: 400px;
+    padding: 20px;
 }
